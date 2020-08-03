@@ -94,9 +94,9 @@ void think_chat_protect_activate(edict_t *ent) {
         if (!((!ent->myskills.abilities[CLOAK].disable) && ((ent->myskills.abilities[CLOAK].current_level > 0)))) {
             if (!trading->value && !ent->automag) // trading mode no chat protection or if automagging either
             {
-                if (sf2qf(ent->client->idle_frames) == CHAT_PROTECT_FRAMES - 100)
+                if (sf2qf(ent->client->idle_frames) == qf2sf(CHAT_PROTECT_FRAMES - 100))
                     safe_centerprintf(ent, "10 seconds to chat-protect.\n");
-                else if (sf2qf(ent->client->idle_frames) == CHAT_PROTECT_FRAMES - 50)
+                else if (sf2qf(ent->client->idle_frames) == qf2sf(CHAT_PROTECT_FRAMES - 50))
                     safe_centerprintf(ent, "5 seconds to chat-protect.\n");
 
                 if (sf2qf(ent->client->idle_frames) == qf2sf(CHAT_PROTECT_FRAMES)) {
