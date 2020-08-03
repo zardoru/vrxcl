@@ -181,6 +181,10 @@ void minisentry_attack (edict_t *self)
 	minisentry_lockon(self);
 	if (self->light_level < 1)
 		return; // out of ammo
+
+	if ( ( level.framenum % qf2sf( 1 ) ) != 0 )
+		return; // only run attacks at 10tps
+
 	// are we affected by holy freeze?
 	//if (HasActiveCurse(self, AURA_HOLYFREEZE))
 	if (que_typeexists(self->curses, AURA_HOLYFREEZE))
@@ -223,6 +227,7 @@ void minisentry_attack (edict_t *self)
 		if (random() > chance)
 			return;
 	}
+
 
 	fire_bullet (self, start, forward, self->dmg, 2*self->dmg, DEFAULT_BULLET_HSPREAD, DEFAULT_BULLET_VSPREAD, MOD_SENTRY);
 	gi.sound(self, CHAN_WEAPON, gi.soundindex("weapons/plaser.wav"), 1, ATTN_NORM, 0);
