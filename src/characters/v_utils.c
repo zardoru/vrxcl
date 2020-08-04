@@ -682,6 +682,8 @@ char *GetAbilityString(int ability_number) {
             return "Tank";
         case MEDIC:
             return "Medic";
+        case ENFORCER:
+            return "Enforcer";
         case BERSERK:
             return "Berserker";
         case METEOR:
@@ -1024,7 +1026,8 @@ qboolean V_CanUseAbilities(edict_t *ent, int ability_index, int ability_cost, qb
             (ability_index != MEDIC) &&
             (ability_index != BLOOD_SUCKER) &&
             (ability_index != TANK) &&
-            (ability_index != BERSERK)) {
+            (ability_index != BERSERK) &&
+            (ability_index != ENFORCER)){
             if (print_msg)
                 safe_cprintf(ent, PRINT_HIGH, "You can't use abilities in human form!\n");
             return false;
@@ -1594,6 +1597,11 @@ void V_ModifyMorphedHealth(edict_t *ent, int type, qboolean morph) {
             mult = 1 + 0.1 * ent->myskills.abilities[MEDIC].current_level;
             if (mult > 2.2)
                 mult = 2.2;
+            break;
+        case MORPH_ENFORCER:
+            mult = 1 + 0.1 * ent->myskills.abilities[ENFORCER].current_level;
+            if (mult > 1.8)
+                mult = 1.8;
             break;
         case M_MYPARASITE:
             mult = 1 + 0.05 * ent->myskills.abilities[BLOOD_SUCKER].current_level;

@@ -111,5 +111,6 @@
 #define SELFDESTRUCT    107
 #define FLASH			108
 #define DECOY			109 // az 3.2b add decoy back into engineer.
+#define ENFORCER		110
 
 #define MAX_ABILITIES	160

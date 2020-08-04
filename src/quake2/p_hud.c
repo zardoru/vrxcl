@@ -846,6 +846,11 @@ void G_SetStats(edict_t *ent)
 			ent->client->ps.stats[STAT_AMMO_ICON] = gi.imageindex("a_cells_hud");
 			ent->client->ps.stats[STAT_AMMO] = ent->myskills.abilities[MEDIC].ammo;
 		}
+		else if (ent->mtype == MORPH_ENFORCER)
+		{
+			ent->client->ps.stats[STAT_AMMO_ICON] = gi.imageindex("a_bullets_hud");
+			ent->client->ps.stats[STAT_AMMO] = ent->myskills.abilities[ENFORCER].ammo;
+		}
 		else if (ent->mtype == MORPH_FLYER)
 		{
 			ent->client->ps.stats[STAT_AMMO_ICON] = gi.imageindex("a_cells_hud");
@@ -861,7 +866,6 @@ void G_SetStats(edict_t *ent)
 			ent->client->ps.stats[STAT_AMMO_ICON] = gi.imageindex("a_blaster_hud");
 			ent->client->ps.stats[STAT_AMMO] = 0;
 		}
-
 	}
 
 	// player-monsters

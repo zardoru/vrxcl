@@ -739,6 +739,18 @@ void Cmd_Togglesecondary_f (edict_t *ent)
 		return;
 	}
 
+	if (ent->mtype == MORPH_ENFORCER)
+	{
+		if (ent->client->weapon_mode==1) {
+			safe_cprintf(ent, PRINT_HIGH, "Chaingun\n");
+			ent->client->weapon_mode=0;
+		} else {
+			safe_cprintf(ent, PRINT_HIGH, "Smack\n");
+			ent->client->weapon_mode=1;
+		}
+		return;
+	}
+
 	if (ent->mtype == MORPH_BERSERK)
 	{
 		if (ent->client->weapon_mode == 2)

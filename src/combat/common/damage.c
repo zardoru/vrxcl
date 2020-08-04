@@ -143,7 +143,7 @@ qboolean IsMorphedPlayer(const edict_t *ent) {
     return (PM_MonsterHasPilot(ent) || ent->mtype == P_TANK || ent->mtype == MORPH_MUTANT ||
             ent->mtype == MORPH_CACODEMON
             || ent->mtype == MORPH_BRAIN || ent->mtype == MORPH_FLYER || ent->mtype == MORPH_MEDIC
-            || ent->mtype == MORPH_BERSERK || ent->mtype == M_MYPARASITE);
+            || ent->mtype == MORPH_BERSERK || ent->mtype == M_MYPARASITE || ent->mtype == MORPH_ENFORCER);
 }
 
 float vrx_get_pack_modifier(const edict_t *ent) {

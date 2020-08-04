@@ -756,6 +756,19 @@ extern double MUTANT_JUMPATTACK_DELAY;
 extern double MUTANT_INITIAL_JUMP_DMG;
 extern double MUTANT_ADDON_JUMP_DMG;
 extern double MUTANT_JUMPATTACK_RADIUS;
+extern double ENFORCER_INIT_COST;
+extern double ENFORCER_DELAY;
+extern double ENFORCER_MG_INITIAL_DMG;
+extern double ENFORCER_MG_ADDON_DMG;
+extern double ENFORCER_MG_INITIAL_AMMO;
+extern double ENFORCER_MG_ADDON_AMMO;
+extern double ENFORCER_MG_START_AMMO;
+extern double ENFORCER_MG_REGEN_FRAMES;
+extern double ENFORCER_MG_REGEN_DELAY;
+extern double ENFORCER_SMACK_INITIAL_DMG;
+extern double ENFORCER_SMACK_ADDON_DMG;
+extern double ENFORCER_SMACK_RANGE;
+
 extern double LEVELUP_ARMOR_VAMPIRE;
 
 extern double BRAIN_ATTACK_RANGE;

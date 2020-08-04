@@ -2970,6 +2970,7 @@ void ClientThink (edict_t *ent, usercmd_t *ucmd)
 	RunFlyerFrames(ent, ucmd);
 	RunMutantFrames(ent, ucmd);
 	RunMedicFrames(ent, ucmd);
+	RunEnforcerFrames(ent, ucmd);
 	RunBerserkFrames(ent, ucmd);
 	EatCorpses(ent);
 	UpdateMirroredEntities(ent);

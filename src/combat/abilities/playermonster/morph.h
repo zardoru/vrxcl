@@ -11,6 +11,7 @@ void RunParasiteFrames (edict_t *ent, usercmd_t *ucmd);
 void Cmd_PlayerToParasite_f (edict_t *ent);
 void RunCacodemonFrames (edict_t *ent, usercmd_t *ucmd);
 void Cmd_PlayerToCacodemon_f (edict_t *ent);
+void Cmd_PlayerToEnforcer_f (edict_t *ent);
 void Cmd_PlayerToMutant_f (edict_t *ent);
 void RunMutantFrames (edict_t *ent, usercmd_t *ucmd);
 void Cmd_PlayerToBrain_f (edict_t *ent);
@@ -19,6 +20,7 @@ void boss_makron_spawn (edict_t *ent);
 void MorphRegenerate (edict_t *ent, int regen_delay, int regen_frames);
 void Cmd_PlayerToMedic_f (edict_t *ent);
 void RunMedicFrames (edict_t *ent, usercmd_t *ucmd);
+void RunEnforcerFrames (edict_t *ent, usercmd_t *ucmd);
 void RunBerserkFrames (edict_t *ent, usercmd_t *ucmd);
 void Cmd_PlayerToBerserk_f (edict_t *ent);
 

@@ -82,6 +82,7 @@ void Cmd_PrintCommandList(edict_t *ent);
 
 gameCommand_s commands[] = 
 {
+	{ "enforcer",		Cmd_PlayerToEnforcer_f },
 	{ "medic", 			Cmd_PlayerToMedic_f },
 	{ "autocannon", 	Cmd_AutoCannon_f },
 	{ "blessedhammer", 	Cmd_BlessedHammer_f },

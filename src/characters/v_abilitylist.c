@@ -156,6 +156,7 @@ abilitydef_t ability_poltergeist[] = {
         {MUTANT,        1, DEFAULT_SOFTMAX, 0},
         {TANK,          1, DEFAULT_SOFTMAX, 0},
         {MEDIC,         1, DEFAULT_SOFTMAX, 0},
+        {ENFORCER,      1, DEFAULT_SOFTMAX, 0},
         {GHOST,         1, DEFAULT_SOFTMAX, 0}, // given for free with morph mastery
         {-1,            0, 0,               0} // Guardian (Add skills above this)
 };
