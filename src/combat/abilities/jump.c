@@ -21,7 +21,7 @@ void V_PlayerJump(edict_t *ent) {
             gi.sound(ent, CHAN_VOICE, gi.soundindex("mutant/mutsght1.wav"), 1, ATTN_NORM, 0);
     } else if (ent->mtype == MORPH_MEDIC) {
         gi.sound(ent, CHAN_VOICE, gi.soundindex("medic/medsght1.wav"), 1, ATTN_NORM, 0);
-    } else if (ent->mtype == MORPH_MEDIC) {
+    } else if (ent->mtype == MORPH_ENFORCER) {
         gi.sound(ent, CHAN_VOICE, gi.soundindex ("infantry/infsght1.wav"), 1, ATTN_NORM, 0);
     } else if (ent->mtype == MORPH_BERSERK) {
         gi.sound(ent, CHAN_VOICE, gi.soundindex("berserk/sight.wav"), 1, ATTN_NORM, 0);
